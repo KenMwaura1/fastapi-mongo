@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
 
     - name: Login
-      uses: okteto/login@master
+      uses: okteto/login@main
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
 
     - name: Delete namespace
-      uses: okteto/delete-namespace@master
+      uses: okteto/delete-namespace@main
       with:
-        namespace: pr-${{ github.event.number }}-youngestdev
+        namespace: pr-${{ github.event.number }}-kenmwaura1
