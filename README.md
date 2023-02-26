@@ -31,6 +31,25 @@ To use the application, follow the outlined steps:
    cp .env.sample .env.dev
    ```
 
+    for local development using a local mongodb instance, you can use the following command to start your mongodb instance:
+
+   ```console
+   mongod
+   ```
+
+   for local development using docker, you can use the following command to start your mongodb instance:
+
+   ```console
+   docker run -d -p 27017:27017 --name mongodb mongo
+   ```
+
+   Create a mongodb database named `fastapi-mongodb` and
+   then update your `.env.dev` file with the following configurations:
+
+   ```console
+   DATABASE_URL=mongodb://localhost:27017/fastapi-mongodb
+   ```
+
 4. Start the application:
 
 ```console
